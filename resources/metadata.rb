@@ -1,0 +1,7 @@
+unified_mode     'true'
+name             'rbagents'
+maintainer       'redborder'
+maintainer_email 'manegron@redborder.com'
+license          'All rights reserved'
+description      'Installs/Configures cookbook-rb-agents'
+version          '0.0.1'
