@@ -21,6 +21,6 @@ cookbook to install and configure redborder-agents service
 
 ## License and Authors
 
-Authors: Miguel N. <manegron@redborder.com>
+Authors: Eneo Tecnología S.L. <git@redborder.com>
 
 LICENSE: AFFERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007
