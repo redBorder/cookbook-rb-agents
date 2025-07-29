@@ -1,32 +1,50 @@
-# Cookbook:: rbagents
+# Cookbook:: rb-agents
 #
 # Provider:: config
 #
 action :add do
   begin
-    redborder_webui_url = new_resource.redborder_webui_url
+    # Resources definition
     user = new_resource.user
+    redborder_webui_base_url = new_resource.redborder_webui_base_url
+    llm_service = new_resource.llm_service
+    anthropic_api_key = new_resource.anthropic_api_key
+    google_gemini_api_key = new_resource.google_gemini_api_key
+    openai_api_key = new_resouce.openai_api_key
+    ollama_base_url = new_resource.ollama_base_url
 
+    # Dnf packages
     dnf_package 'redborder-agents' do
       action :upgrade
       flush_cache[:before]
     end
 
-    template '/opt/redborder-agents/redborder-agents/src/redborder_agents' do
+    dnf_package 'redborder-pythonpyenv' do
+      action :upgrade
+      flush_cache[:before]
+    end
+
+    # Templates
+    template '/opt/redborder-agents/redborder-agents/src/redborder_agents/.venv' do
       source 'env.erb'
       owner user
       group user
       mode '644'
       retries 2
       variables(
-        redborder_webui_url: redborder_webui_url,
-        log_file: log_file,
-        s3_hostname: s3_hostname
+        redborder_webui_base_url: redborder_webui_base_url,
+        llm_service: llm_service,
+        model_name: model_name,
+        anthropic_api_key: anthropic_api_key,
+        google_gemini_api_key: google_gemini_api_key,
+        openai_api_key: openai_api_key,
+        ollama_base_url: ollama_base_url
       )
-      cookbook 'rbagents'
+      cookbook 'rb-agents'
       notifies :restart, 'service[redborder-agents]', :delayed
     end
 
+    # Services
     service 'redborder-agents' do
       service_name 'redborder-agents'
       ignore_failure true
@@ -34,7 +52,7 @@ action :add do
       action [:enable, :start]
     end
 
-    Chef::Log.info('cookbook redborder-agents has been processed.')
+    Chef::Log.info('cookbook rb-agents has been processed.')
   rescue => e
     Chef::Log.error(e.message)
   end

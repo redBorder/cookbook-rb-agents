@@ -1,10 +1,10 @@
 #
-# Cookbook:: rbagents
+# Cookbook:: rb-agents
 # Recipe:: default
 #
 # redborder
 #
 #
-rbagents_config 'config' do
+rb_agents_config 'config' do
   action :add
 end

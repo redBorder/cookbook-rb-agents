@@ -2,7 +2,7 @@ Name:     cookbook-rb-agents
 Version:  %{__version}
 Release:  %{__release}%{?dist}
 BuildArch: noarch
-Summary: rbagents cookbook to install and configure it in redborder environments
+Summary: rb-agents cookbook to install and configure it in redborder-agents service
 
 
 License:  GNU AGPLv3
@@ -35,7 +35,7 @@ case "$1" in
   ;;
   2)
     # This is an upgrade.
-    su - -s /bin/bash -c 'source /etc/profile && rvm gemset use default && env knife cookbook upload rbagents'
+    su - -s /bin/bash -c 'source /etc/profile && rvm gemset use default && env knife cookbook upload rb-agents'
   ;;
 esac
 
@@ -49,5 +49,5 @@ systemctl daemon-reload
 %doc
 
 %changelog
-* Thu Jul 24 2025 - Miguel N. <manegron@redborder.com> - 0.0.1-1
+* Thu Jul 24 2025 - manegron <manegron@redborder.com> - 0.0.1-1
 - Initial spec version

@@ -1,3 +1,3 @@
 # default attributes
 #
-default['rb-agents']['registered'] = false
+default['redborder-agents']['registered'] = false

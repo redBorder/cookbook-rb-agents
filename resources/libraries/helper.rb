@@ -1,4 +1,4 @@
-module Rbagents
+module Agents
   module Helpers
   end
 end
