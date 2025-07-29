@@ -4,7 +4,6 @@ Release:  %{__release}%{?dist}
 BuildArch: noarch
 Summary: rb-agents cookbook to install and configure it in redborder-agents service
 
-
 License:  GNU AGPLv3
 URL:  https://github.com/redBorder/cookbook-rb-agents
 Source0: %{name}-%{version}.tar.gz

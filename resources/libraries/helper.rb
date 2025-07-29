@@ -1,4 +1,8 @@
+# Cookbook:: rb-agents
+#
+# Libraries:: helper
+#
 module Agents
-  module Helpers
+  module Helper
   end
 end
