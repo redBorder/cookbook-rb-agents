@@ -11,5 +11,5 @@ attribute :redborder_webui_base_url, kind_of: String, default: 'https://webui.se
 attribute :llm_service, kind_of: String
 attribute :anthropic_api_key, kind_of: String
 attribute :google_gemini_api_key, kind_of: String
-attribute :openai_api_key, kind_of: String
 attribute :ollama_base_url, kind_of: String
+attribute :openai_api_key, kind_of: String

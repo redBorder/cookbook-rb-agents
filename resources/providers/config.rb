@@ -10,8 +10,8 @@ action :add do
     llm_service = new_resource.llm_service
     anthropic_api_key = new_resource.anthropic_api_key
     google_gemini_api_key = new_resource.google_gemini_api_key
-    openai_api_key = new_resouce.openai_api_key
     ollama_base_url = new_resource.ollama_base_url
+    openai_api_key = new_resouce.openai_api_key
 
     # Dnf packages
     dnf_package 'redborder-agents' do
@@ -37,8 +37,8 @@ action :add do
         model_name: model_name,
         anthropic_api_key: anthropic_api_key,
         google_gemini_api_key: google_gemini_api_key,
-        openai_api_key: openai_api_key,
-        ollama_base_url: ollama_base_url
+        ollama_base_url: ollama_base_url,
+        openai_api_key: openai_api_key        
       )
       cookbook 'rb-agents'
       notifies :restart, 'service[redborder-agents]', :delayed
