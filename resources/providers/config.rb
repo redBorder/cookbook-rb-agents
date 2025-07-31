@@ -8,6 +8,7 @@ action :add do
     user = new_resource.user
     redborder_webui_base_url = new_resource.redborder_webui_base_url
     llm_service = new_resource.llm_service
+    model_name = new_resource.model_name
     anthropic_api_key = new_resource.anthropic_api_key
     google_gemini_api_key = new_resource.google_gemini_api_key
     ollama_base_url = new_resource.ollama_base_url
