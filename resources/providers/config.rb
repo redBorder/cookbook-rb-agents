@@ -39,7 +39,7 @@ action :add do
         anthropic_api_key: anthropic_api_key,
         google_gemini_api_key: google_gemini_api_key,
         ollama_base_url: ollama_base_url,
-        openai_api_key: openai_api_key        
+        openai_api_key: openai_api_key
       )
       cookbook 'rb-agents'
       notifies :restart, 'service[redborder-agents]', :delayed
