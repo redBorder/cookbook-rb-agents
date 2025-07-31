@@ -43,6 +43,7 @@ action :add do
       )
       cookbook 'rb-agents'
       notifies :restart, 'service[redborder-agents]', :delayed
+      only_if { ::Dir.exist?('/opt/redborder-agents/src/redborder_agents/') }
     end
 
     # Services
