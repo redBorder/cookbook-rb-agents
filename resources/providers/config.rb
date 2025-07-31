@@ -26,7 +26,7 @@ action :add do
     end
 
     # Templates
-    template '/opt/redborder-agents/src/redborder_agents/.venv' do
+    template '/opt/redborder-agents/src/redborder_agents/.env' do
       source 'env.erb'
       owner user
       group user
