@@ -14,15 +14,16 @@ action :add do
     ollama_base_url = new_resource.ollama_base_url
     openai_api_key = new_resource.openai_api_key
 
-    # Dnf packages
+    # RPM Installation
     dnf_package 'redborder-agents' do
       action :upgrade
-      flush_cache[:before]
     end
 
+    # This package is needed to install the correct
+    # python version and python libraries.
+    # It's also as Require in redborder-manager package.
     dnf_package 'redborder-pythonpyenv' do
       action :upgrade
-      flush_cache[:before]
     end
 
     # Templates
