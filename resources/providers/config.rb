@@ -7,8 +7,7 @@ action :add do
     # Resources definition
     user = new_resource.user
     redborder_webui_base_url = new_resource.redborder_webui_base_url
-    llm_service = new_resource.llm_service
-    model_name = new_resource.model_name
+    model = new_resource.model
     anthropic_api_key = new_resource.anthropic_api_key
     google_gemini_api_key = new_resource.google_gemini_api_key
     ollama_base_url = new_resource.ollama_base_url
@@ -36,7 +35,7 @@ action :add do
       variables(
         redborder_webui_base_url: redborder_webui_base_url,
         llm_service: llm_service,
-        model_name: model_name,
+        model: model,
         anthropic_api_key: anthropic_api_key,
         google_gemini_api_key: google_gemini_api_key,
         ollama_base_url: ollama_base_url,
