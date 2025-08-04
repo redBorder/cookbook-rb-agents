@@ -34,7 +34,6 @@ action :add do
       retries 2
       variables(
         redborder_webui_base_url: redborder_webui_base_url,
-        llm_service: llm_service,
         model: model,
         anthropic_api_key: anthropic_api_key,
         google_gemini_api_key: google_gemini_api_key,
