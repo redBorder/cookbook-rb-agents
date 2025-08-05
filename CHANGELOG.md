@@ -1,6 +1,11 @@
 cookbook-rb-agents CHANGELOG
 ===============
 
+## 0.0.5
+
+  - manegron
+    - [e7713ee] Rename GOOGLE_GEMINI_API_KEY to GEMINI_API_KEY
+
 ## 0.0.4
   - manegron
     - Remove llm_service
