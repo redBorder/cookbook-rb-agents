@@ -1,6 +1,10 @@
 cookbook-rb-agents CHANGELOG
 ===============
 
+## 0.0.4
+  - manegron
+    - Remove llm_service
+  
 ## 0.0.3
   - manegron
     - Remove flush cache and add comments
