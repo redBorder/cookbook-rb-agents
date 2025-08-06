@@ -1,6 +1,11 @@
 cookbook-rb-agents CHANGELOG
 ===============
 
+## 0.0.8
+
+  - manegron
+    - [a616f15] Update port
+
 ## 0.0.7
 
   - manegron
