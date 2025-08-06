@@ -1,6 +1,11 @@
 cookbook-rb-agents CHANGELOG
 ===============
 
+## 0.0.6
+
+  - manegron
+    - [95c7749] Rename google_gemini to gemini
+
 ## 0.0.5
 
   - manegron
