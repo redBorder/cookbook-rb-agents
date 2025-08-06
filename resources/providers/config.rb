@@ -9,7 +9,7 @@ action :add do
     redborder_webui_base_url = new_resource.redborder_webui_base_url
     model = new_resource.model
     anthropic_api_key = new_resource.anthropic_api_key
-    google_gemini_api_key = new_resource.google_gemini_api_key
+    gemini_api_key = new_resource.gemini_api_key
     ollama_base_url = new_resource.ollama_base_url
     openai_api_key = new_resource.openai_api_key
 
@@ -36,7 +36,7 @@ action :add do
         redborder_webui_base_url: redborder_webui_base_url,
         model: model,
         anthropic_api_key: anthropic_api_key,
-        google_gemini_api_key: google_gemini_api_key,
+        gemini_api_key: gemini_api_key,
         ollama_base_url: ollama_base_url,
         openai_api_key: openai_api_key
       )
