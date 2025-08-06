@@ -1,6 +1,11 @@
 cookbook-rb-agents CHANGELOG
 ===============
 
+## 0.0.7
+
+  - manegron
+    - [0f26d53] Use sync ip to register
+
 ## 0.0.6
 
   - manegron
