@@ -13,3 +13,4 @@ attribute :anthropic_api_key, kind_of: String
 attribute :gemini_api_key, kind_of: String
 attribute :ollama_base_url, kind_of: String
 attribute :openai_api_key, kind_of: String
+attribute :ipaddress, kind_of: String, default: '127.0.0.1'

@@ -73,12 +73,14 @@ action :remove do
 end
 
 action :register do
+  ipaddress = new_resource.ipaddress
+
   begin
     unless node['redborder-agents']['registered']
       query = {}
       query['ID'] = "redborder-agents-#{node['hostname']}"
       query['Name'] = 'redborder-agents'
-      query['Address'] = "#{node['ipaddress']}"
+      query['Address'] = ipaddress
       query['Port'] = 443
       json_query = Chef::JSONCompat.to_json(query)
 
