@@ -7,6 +7,7 @@ action :add do
     # Resources definition
     user = new_resource.user
     redborder_webui_base_url = new_resource.redborder_webui_base_url
+    auth_token = new_resource.auth_token
     model = new_resource.model
     anthropic_api_key = new_resource.anthropic_api_key
     gemini_api_key = new_resource.gemini_api_key
@@ -34,6 +35,7 @@ action :add do
       retries 2
       variables(
         redborder_webui_base_url: redborder_webui_base_url,
+        auth_token: auth_token,
         model: model,
         anthropic_api_key: anthropic_api_key,
         gemini_api_key: gemini_api_key,
