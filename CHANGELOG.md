@@ -1,6 +1,11 @@
 cookbook-rb-agents CHANGELOG
 ===============
 
+## 0.0.9
+
+  - manegron
+    - [80828aa] Upload cookbook only if opscode-erchef is active
+
 ## 0.0.8
 
   - manegron
